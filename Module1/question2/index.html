@@ -1,0 +1,48 @@
+<!--1] script at the head tag -->
+<html>
+  <head>
+    <script>
+      document.getElementById("test").innerHTML = "Goodbye World";
+    </script>
+  </head>
+  <body>
+    <h1 id = "test">Hello World</h1>
+  </body>
+</html>
+<!-- Ans:  the script is placed before the <h1> element in the <body>,
+      the <h1> element with the id "test" is not yet present in the DOM when the script runs. 
+      Therefore, resulting in a null value. -->
+
+<!--2] at the start of the body tag -->
+<html>
+  <head>
+  
+  </head>
+  <body>
+    <script>
+      document.getElementById("test").innerHTML = "Goodbye World";
+    </script>
+
+    <h1 id = "test">Hello World</h1>
+  </body>
+</html>
+    <!-- Ans: As a result, document.getElementById("test") returns null 
+    since there is no element with the id "test" at the time the script is executed. 
+    Attempting to set the innerHTML property of null will result in an error. -->
+
+<!-- 3] at the end of the body tag -->
+<html>
+  <head>
+  
+  </head>
+  <body>
+     <h1 id = "test">Hello World</h1>
+
+     <script>
+      document.getElementById("test").innerHTML = "Goodbye World";
+    </script>
+  </body>
+</html>
+<!-- 
+Ans:  the <h1> element is present in the DOM before the JavaScript code executes,
+      document.getElementById("test") successfully retrieves the element, and its innerHTML is updated accordingly. -->
