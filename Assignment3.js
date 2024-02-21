@@ -65,7 +65,7 @@ console.log(numbersArray);
 function findNumber(array, target) {
   for (let i = 0; i < array.length; i++) {
       if (array[i] === target) {
-          return i; // Return early if the target is found
+          return i; // Return if the target is found
       }
   }
   return -1; // Return -1 if the target is not found
