@@ -30,6 +30,7 @@ function callbackFunc(){
  return 5;
 }
 
-test(callbackFunc)          // Output : calling the callback function
-test(callbackFunc())        // Output : TypeError: callback is not a function
-test(() => callbackFunc())  // Output : calling the callback function
+// test(callbackFunc)          // Output : calling the callback function
+// test(callbackFunc())        // Output : TypeError: callback is not a function
+// (test(() => callbackFunc()) // Output : calling the callback function
+// console.log(test(() => callbackFunc))

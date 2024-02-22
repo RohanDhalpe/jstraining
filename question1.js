@@ -48,3 +48,4 @@
     console.log(findFirstPositiveNumber(numberArray)); // Output: 3
 
 // 5] Returning from Inside an If Block:  Yes, we can use return from inside an if block. The function will exit when the return statement encountered in if block, and any code will not be executed.
+ 
