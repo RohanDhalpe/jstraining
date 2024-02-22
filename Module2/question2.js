@@ -2,23 +2,24 @@
 //    What do you expect to happen in both cases? What actually happens in both cases. 
 //    What is the difference between an object declared as a let or a const variable?
 
-let myArr = [5,10,15]
-console.log(myArr)
+let myArr = [5, 10, 15];
+console.log(myArr); // Output: [5, 10, 15]
 
-myArr[0] = 4
-console.log(myArr)
+myArr[0] = 4;
+console.log(myArr); // Output: [4, 10, 15]
 
-delete myArr[0]
-console.log(myArr)
+delete myArr[0];
+console.log(myArr); // Output: [empty, 10, 15]
 
-let myObj = {name:"rohan",age:10 }
-console.log(myObj)
+let myObj = { name: "rohan", age: 10 };
+console.log(myObj); // Output: { name: "rohan", age: 10 }
 
-myObj.age = 15
-console.log(myObj)
+myObj.age = 15;
+console.log(myObj); // Output: { name: "rohan", age: 15 }
 
-delete myObj.age
-console.log(myObj)
+delete myObj.age;
+console.log(myObj); // Output: { name: "rohan" }
+
 
 //===============================================================//
 
@@ -30,16 +31,20 @@ const myConstObject = { name: "Rohan", age: 22 };
 
 // Modifying properties in arrays
 myConstArray[0] = 10;
-// myConstArray[0] = 10; // This would throw an error because myConstArray is declared as const
+console.log(myConstArray); // Output: [10, 2, 3]
 
-// Modifying properties in objects
-myConstObject.name = "ABC"; // This would throw an error because myConstObject is declared as const
+// Modifying properties in objects 
+myConstObject.name = "ABC";
+console.log(myConstObject); // Output: { name: "ABC", age: 22 }
 
-// Deleting properties in arrays (using the delete operator)
+// Deleting properties in arrays (using the delete operator) (Allowed, but leaves an "empty" slot)
 delete myConstArray[1];
-// delete myConstArray[1]; // This would throw an error because myConstArray is declared as const
+console.log(myConstArray); // Output: [10, empty, 3]
 
-// Deleting properties in objects (using the delete operator)
+// Deleting properties in objects (using the delete operator) (Allowed)
 delete myConstObject.age;
-// delete myConstObject.age; // This would throw an error because myConstObject is declared as const
+console.log(myConstObject); // Output: { name: "ABC" }
 
+// Using const with arrays and objects means the reference to them cannot be reassigned.
+// However, it does not prevent modifying the contents of arrays or properties of objects.
+// Modifying elements in arrays and properties in objects, as well as deleting elements/properties, is allowed with const.
