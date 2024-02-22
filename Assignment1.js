@@ -11,10 +11,10 @@ let originalObject = {
 }
 
 let newObject = {...originalObject};
-// console.log(newObject);
+console.log(newObject);
 
 newObject.address.details[0] = "5";
-console.log(newObject);
+console.log(originalObject);
 
 
 // 2. Write a function filterObj that will filter out all the keys of a flat object that have objects or arrays using Object.keys and Object.entries. Example:
