@@ -1,6 +1,11 @@
 //2. What makes a method mutating or non mutating in Javascript? 
 //   Find out whether each of the following methods are mutating or non-mutating. How can you verify this?:
 
+
+// Mutating methods : Mutating methods are those that directly modify the original data structure.
+// Non-mutating methods :Non-mutating methods do not modify the original data structure they are called on.
+//                       Instead, they return a new data structure with modifications.
+
 // 1) Push - Mutating
   
 let arr1 = [2,4,6,8,10,12];
