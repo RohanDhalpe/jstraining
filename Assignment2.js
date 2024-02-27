@@ -55,25 +55,20 @@ console.log(mapBy(users, "first_name") )
   "gender":"Female"
 }];
 
-const groupBy = (user, key)=>{
-  let object = {}
-  let male = [];
-  let female = [];
+const groupBy = (users, key) => {
+  let groups = {};
 
-  for(let i=0;i<user.length;i++){
-   
-    if(user[i][key] == "Male")
-    {
-      male.push(user[i])
-    }else{
-      female.push(user[i])
+  for (let i = 0; i < users.length; i++) {
+    const value = users[i][key];
+    if (!groups[value]) {
+      groups[value] = [];
     }
+    groups[value].push(users[i]);
   }
-  object["Male"] = male;
-  object["Female"] = female;
-  return object
+
+  return groups;
 }
-console.log(groupBy(user, "gender"))
+console.log(groupBy(user, "key"))
 
 //This should return 
 //{
@@ -94,7 +89,7 @@ function sort(array, key, order) {
           if (a[key] < b[key]) return -1;
           if (a[key] > b[key]) return 1;
           return 0;
-      } else if (order === 'desc') {
+      } else {
           if (a[key] > b[key]) return -1;
           if (a[key] < b[key]) return 1;
           return 0;
