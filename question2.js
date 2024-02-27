@@ -33,4 +33,4 @@ function callbackFunc(){
 // test(callbackFunc)          // Output : calling the callback function
 // test(callbackFunc())        // Output : TypeError: callback is not a function
 // (test(() => callbackFunc()) // Output : calling the callback function
-(test(() => callbackFunc))  
+// console.log((test(() => callbackFunc))) Output : undefined
