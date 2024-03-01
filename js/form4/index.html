@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="getUsers()">
+    <h1>User List</h1>
+    <div id="table"></div>
+    <button id="sortBtn" onclick="sortByName()">Sort</button><br><br>
+    <div class="search-container">
+        <input id="filter" name="filter" type="text" placeholder="Search...">
+        <button id="searchButton" onclick="search()">Search</button>
+        <button id="getAllUsersButton" onclick="getAllUsers()">Get All Users</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
